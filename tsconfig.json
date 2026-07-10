@@ -1,16 +1,24 @@
 {
-  "extends": "../../tsconfig.base.json",
-  "compilerOptions": {
-    "jsx": "react-native",
-    "lib": ["ES2020"],
-    "allowJs": true,
-    "strict": true,
-    "noUncheckedIndexedAccess": false,
-    "paths": {
-      "@streambrws/shared-types": ["../../packages/shared-types/src"],
-      "@streambrws/shared-logic": ["../../packages/shared-logic/src"],
-      "@streambrws/ui-tokens": ["../../packages/ui-tokens/src"]
-    }
-  },
-  "include": ["src", "App.tsx"]
+    "compilerOptions": {
+          "target": "ESNext",
+          "lib": ["ESNext"],
+          "allowJs": true,
+          "skipLibCheck": true,
+          "jsx": "react-native",
+          "moduleResolution": "bundler",
+          "allowImportingTsExtensions": true,
+          "resolveJsonModule": true,
+          "strict": true,
+          "noEmit": true,
+          "baseUrl": ".",
+          "paths": {
+                  "@streaming/api-client": ["./src/lib/api-client"],
+                  "@streaming/types": ["./src/lib/types"],
+                  "@streaming/tokens": ["./src/lib/tokens"],
+                  "@streambrws/shared-logic": ["./src/lib/shared-logic"],
+                  "@streambrws/shared-types": ["./src/lib/types"],
+                  "@streambrws/ui-tokens": ["./src/lib/tokens"]
+          }
+    },
+    "include": ["src", "app", "App.tsx"]
 }
